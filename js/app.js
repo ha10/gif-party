@@ -30,7 +30,7 @@ $("button").click(function(event) {
 
   var buttonID = $(this).attr("id");
   var searchTerm = buttonID;
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + buttonID + "&api_key=dc6zaTOxFJmzC";
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + buttonID + "&api_key=dc6zaTOxFJmzC&limit=10";
 
   $.ajax({
     url: queryURL,
@@ -78,7 +78,7 @@ $(document).on('click', '.gif', function() {
 $("#search-btn").on("click", function(event){
   event.preventDefault();
   var searchTerm = $("#search-text").val();
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchTerm + "&api_key=dc6zaTOxFJmzC";
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchTerm + "&api_key=dc6zaTOxFJmzC&limit=10";
 
   $.ajax({
     url: queryURL,
